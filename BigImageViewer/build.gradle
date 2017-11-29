@@ -23,18 +23,18 @@
  */
 
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.ben-manes.versions'
-apply from: "https://raw.githubusercontent.com/Piasy/GradleScripts/master/PRJ_NAME/gradle/bintray.gradle"
+//apply plugin: 'com.github.ben-manes.versions'
+//apply from: "https://raw.githubusercontent.com/Piasy/GradleScripts/master/PRJ_NAME/gradle/bintray.gradle"
 
 android {
-    compileSdkVersion rootProject.ext.androidCompileSdkVersion
-    buildToolsVersion rootProject.ext.androidBuildToolsVersion
+    compileSdkVersion 27
+    buildToolsVersion "27.0.1"
 
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode rootProject.ext.releaseVersionCode
-        versionName rootProject.ext.releaseVersionName
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1"
     }
     buildTypes {
         release {
@@ -45,7 +45,7 @@ android {
 }
 
 dependencies {
-    implementation "com.android.support:support-annotations:$rootProject.ext.androidSupportSdkVersion"
+    implementation "com.android.support:support-annotations:27.0.2"
 
-    api "com.davemorrissey.labs:subsampling-scale-image-view:$rootProject.ext.ssivVersion"
+    api "com.davemorrissey.labs:subsampling-scale-image-view:3.8.0"
 }
